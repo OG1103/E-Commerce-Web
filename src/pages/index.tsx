@@ -1,6 +1,5 @@
 import MetaTags from "@/app/Components/atoms/metaTags/metaTags";
-import BasicLayout from "@/app/Layouts/basicLayout";
-
+import HomeTemplate from "@/app/Components/templates/home/HomeTemplate";
 import { NextPage } from "next";
 
 const HomePage: NextPage = () => {
@@ -13,9 +12,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <MetaTags {...metaTags} />
-      <BasicLayout>
-        <h1>Hello</h1>
-      </BasicLayout>
+      <HomeTemplate/>
     </>
   );
 };

@@ -3,11 +3,11 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#232F3E", // Amazon-like Dark Blue for Header/Footer
-      light: "#37475A", // Lighter Blue for Hover
+      main: "#003d52",
+      light: "#0091c2",
     },
     secondary: {
-      main: "#FF9900", // Amazon Gold/Orange for Highlights
+      main: "#ffae00",
     },
     error: {
       main: "#f44336",
@@ -22,14 +22,13 @@ const theme = createTheme({
       main: "#4caf50",
     },
     text: {
-      primary: "#111", // Dark text for better contrast
-      secondary: "#757575", // Light Grey for Subtext
+      primary: "#212121",
+      secondary: "#757575",
     },
     background: {
-      default: "#F5F5F5", // Light Grey Background like Amazon
-      paper: "#FFFFFF", // White Cards/Panels
+      default: "#fff",
+      paper: "#e7ecef",
     },
-    divider: "#D5D9D9", // Borders and Separators
   },
   typography: {
     fontFamily: "Roboto, sans-serif",
@@ -79,16 +78,21 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 6,
-          padding: "8px 16px",
-          textTransform: "none",
+          borderRadius: 10,
+          padding: "10px 20px",
         },
       },
     },
   },
   spacing: 8,
   breakpoints: {
-    values: { xs: 0, sm: 600, md: 900, lg: 1200, xl: 1500 },
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
   },
 });
 
