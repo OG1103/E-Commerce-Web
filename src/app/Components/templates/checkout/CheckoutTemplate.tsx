@@ -18,8 +18,7 @@ import {
   Step,
   StepLabel,
   Alert,
-  CircularProgress,
-  Snackbar
+  CircularProgress
 } from '@mui/material';
 import Link from "next/link";
 
@@ -69,7 +68,7 @@ const CheckoutTemplate: FC = () => {
   });
   
   const [saveInfo, setSaveInfo] = useState(true);
-  const [shipping, setShipping] = useState(5.99);
+  const [shipping] = useState(5.99);
   
   // Order completion state
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -162,12 +161,12 @@ const CheckoutTemplate: FC = () => {
   };
   
   // Handle country selection
-  const handleCountryChange = (e: any) => {
-    setAddress(prev => ({
-      ...prev,
-      country: e.target.value
-    }));
-  };
+  // const handleCountryChange = (e:) => {
+  //   setAddress(prev => ({
+  //     ...prev,
+  //     country: e.target.value
+  //   }));
+  // };
   
   // Validate shipping form
   const validateShippingForm = (): boolean => {
@@ -239,7 +238,9 @@ const CheckoutTemplate: FC = () => {
       setTimeout(() => {
         // setLocation('/');
       }, 5000);
-    } catch (error) {
+    } catch (e) {
+      console.log(e);
+      
       setOrderError('There was a problem processing your order. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -322,7 +323,7 @@ const CheckoutTemplate: FC = () => {
             id="country"
             value={address.country}
             label="Country"
-            onChange={handleCountryChange}
+            //onChange={handleCountryChange}
           >
             <MenuItem value="US">United States</MenuItem>
             <MenuItem value="CA">Canada</MenuItem>
@@ -603,7 +604,7 @@ const CheckoutTemplate: FC = () => {
               Thank you for your order!
             </Typography>
             <Typography variant="body1" paragraph>
-              Your order has been placed successfully. We've sent a confirmation to your email.
+              Your order has been placed successfully. We sent a confirmation to your email.
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
               You will be redirected to the home page in a few seconds...

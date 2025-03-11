@@ -36,7 +36,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({ name, avatar, rating, comme
         </Box>
         
         <Typography variant="body2" color="text.secondary">
-          "{comment}"
+          {comment}
         </Typography>
       </CardContent>
     </Card>

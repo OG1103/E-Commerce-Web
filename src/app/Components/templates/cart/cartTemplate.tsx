@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 import { 
   Box, 
   Container, 
@@ -11,21 +11,19 @@ import {
   List,
   ListItem,
   ListItemText,
-  Hidden
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from 'next/link';
 
 import Footer from '../../organisms/footer/Footer';
-import CartItem from '../../molecules/cartItem/CartItem';
 import ProductGrid from '../../organisms/productGrid/ProductGrid';
 import { getFeaturedProducts } from '../../../Data/products';
 
 const CartTemplate: FC = () => {
-  const [recommendedProducts, setRecommendedProducts] = useState(getFeaturedProducts().slice(0, 4));
+  const [recommendedProducts] = useState(getFeaturedProducts().slice(0, 4));
   const [couponCode, setCouponCode] = useState('');
-  const [shipping, setShipping] = useState(5.99);
-  const [grandTotal, setGrandTotal] = useState(0);
+  const [shipping] = useState(5.99);
+  const [grandTotal] = useState(0);
   
   const handleCouponChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCouponCode(e.target.value);
@@ -51,7 +49,6 @@ const CartTemplate: FC = () => {
                 Your cart is empty
               </Typography>
               <Typography variant="body2" color="text.secondary" paragraph>
-                Looks like you haven't added any products to your cart yet.
               </Typography>
               <Button 
                 variant="contained" 

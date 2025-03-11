@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { Stack, Rating as MuiRating } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
 
 interface RatingProps {
   value: number;

@@ -6,7 +6,7 @@ interface CartItemProps {
   item: object;
 }
 
-const CartItem: FC<CartItemProps> = ({ item }) => {  
+const CartItem: FC<CartItemProps> = ( ) => {  
   const handleIncrement = () => {
   };
   

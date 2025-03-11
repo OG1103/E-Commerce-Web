@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Box, Container, Typography, TextField, Button, InputAdornment, Link, Alert } from '@mui/material';
+import { Box, Container, Typography, TextField, Button, Link, Alert } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 
 const Newsletter: FC = () => {

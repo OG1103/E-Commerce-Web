@@ -22,7 +22,7 @@ import Footer from '../../organisms/footer/Footer';
 import Rating from '../../atoms/ratings/Ratings';
 import PriceDisplay from '../../atoms/priceDisplay/PriceDisplay';
 import ProductGrid from '../../organisms/productGrid/ProductGrid';
-import { Product, getProductById, getProductsByCategory } from '../../../Data/products';
+import { Product, getProductsByCategory } from '../../../Data/products';
 
 interface ProductDetailsTemplateProps {
   product: Product;

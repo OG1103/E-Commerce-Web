@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Grid, Typography, Box, Container } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import ProductCard from '../../molecules/productCard/ProductCard';
 import { Product } from '../../../Data/products';
 

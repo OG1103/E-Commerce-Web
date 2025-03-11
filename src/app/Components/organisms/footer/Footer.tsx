@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Container, Grid, Typography, Link as MuiLink, Divider, IconButton, useTheme } from "@mui/material";
+import { Box, Container, Grid, Typography, Link as MuiLink, Divider, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import Logo from "../../atoms/logo/Logo";
 
 const Footer: FC = () => {
-  const theme = useTheme();
+  //const theme = useTheme();
   const currentYear = new Date().getFullYear();
 
   return (

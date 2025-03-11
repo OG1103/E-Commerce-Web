@@ -4,18 +4,10 @@ import Router from "next/router";
 import { useEffect, useState } from "react";
 
 export default function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<TUser | null>(null)
-    async function fetchCurrentUser(){
-        try{
-
-        }catch(err){
-            
-        }
-
-    }
+    const [user] = useState<TUser | null>(null)
     async function signIn(email: string, password: string) {
         try {
-            const response = await axios.post('/users/signIn', { user: email, password });
+            await axios.post('/users/signIn', { user: email, password });
             Router.push('/' as string)
 
         } catch (error: unknown) {
@@ -52,11 +44,11 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
     }
 
     function refresh(){
-        fetchCurrentUser()
+        //fetchCurrentUser()
     }
 
     useEffect(() => {
-        fetchCurrentUser();
+        //fetchCurrentUser();
     }, []);
 
     return <AuthContext.Provider value={{ signIn, signOut, user, refresh }}>{children}</AuthContext.Provider>

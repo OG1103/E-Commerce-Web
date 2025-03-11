@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC} from "react";
 import { useRouter } from "next/router";
 import ProductDetailsTemplate from "../app/Components/templates/productDetails/ProductDetailsTemplate";
 import { getProductById } from "../app/Data/products";
